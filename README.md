@@ -1,1 +1,0 @@
-# blick_website
