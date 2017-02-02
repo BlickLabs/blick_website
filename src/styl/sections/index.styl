@@ -1,5 +1,6 @@
 .hero-section
   height "calc(100vh - %s)" % remify(145)
+  min-height 300px
 
 .hero-title
   font-size remify(25)
@@ -50,6 +51,7 @@
 .projects-grid
   display flex
   flex-wrap wrap
+  justify-content center
   width 95%
   max-width 792px
   center-block()
@@ -106,3 +108,8 @@
 
 .sentirmebien
   background $sentirmebien
+
+@media screen and (orientation: portrait)
+  .hero-section
+    height "calc(70vh - %s)" % remify(145)
+    min-height 400px
