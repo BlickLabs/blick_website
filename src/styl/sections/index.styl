@@ -20,12 +20,36 @@
   color $lightGray
 
 .projects-section-wrapper
-  background $darkBlue
+  position relative
+
+  &::before
+    background $darkBlue
+    content ' '
+    display block
+    height 65vh
+    position absolute
+    width 100%
+    z-index -1
 
   h2
     color white
     font-weight $heavy
     font-size remify(18)
+
+.projects-grid
+  display flex
+  flex-wrap wrap
+  width 95%
+  max-width 792px
+  center-block()
+
+.project-item
+  flex-basis 264px
+  height 179px
+
+  a
+    height 100%
+    width 100%
 
 .dreamwater
   background $dreamwater
