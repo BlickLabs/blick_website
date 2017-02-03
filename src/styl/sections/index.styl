@@ -14,6 +14,9 @@
 .hero-main-content
   transition padding-top 0.2s
 
+  img
+    width remify(33)
+
 .hero-main-content.fixed
   background white
   left 0
@@ -201,3 +204,17 @@
   .project-item
     flex-basis 100%
     max-width 300px
+
+@media screen and (min-width: 1600px)
+  .projects-grid
+    width 75vw
+    max-width initial
+
+  .project-item
+    flex-basis 33.33333%
+    height 16.9vw
+
+    img
+      max-height 40%
+      width auto
+      max-width 70%
