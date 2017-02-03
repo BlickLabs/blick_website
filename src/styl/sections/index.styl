@@ -70,6 +70,7 @@
     content ' '
     display block
     height 65vh
+    max-height 65%
     position absolute
     transition all 0.2s
     width 100%
@@ -109,91 +110,106 @@
   background $dreamwater
 
   img
-    width 75px
+    min-width 75px
+    width remify(75)
 
 .dondinero
   background $dondinero
 
   img
-    width 133px
+    min-width 133px
+    width remify(133)
 
 .emma
   background $emma
 
   img
-    width 127px
+    min-width 127px
+    width remify(127)
 
 .brick
   background $brick
 
   img
-    width 74px
+    min-width 74px
+    width remify(74)
 
 .vre
   background $vre
 
   img
-    width 129px
+    min-width 129px
+    width remify(129)
 
 .arkfund
   background $arkfund
 
   img
-    width 120px
+    min-width 120px
+    width remify(120)
 
 .mccosmetics
   background $mccosmetics
 
   img
-    width 65px
+    min-width 65px
+    width remify(65)
 
 .begona
   background $begona
 
   img
-    width 73px
+    min-width 73px
+    width remify(73)
 
 .local-e
   background $local-e
 
   img
-    width 100px
+    min-width 100px
+    width remify(100)
 
 .debisa
   background $debisa
 
   img
-    width 97px
+    min-width 97px
+    width remify(97)
 
 .casabeltrami
   background $casabeltrami
 
   img
-    width 74px
+    min-width 74px
+    width remify(74)
 
 .aerial
   background $aerial
 
   img
-    width 73px
+    min-width 73px
+    width remify(73)
 
 .rancholucero
   background $rancholucero
 
   img
-    width 72px
+    min-width 72px
+    width remify(72)
 
 .opia
   background $opia
 
   img
-    width 93px
+    min-width 93px
+    width remify(93)
 
 .sentirmebien
   background $sentirmebien
 
   img
-    width 161px
+    min-width 161px
+    width remify(161)
 
 @media screen and (orientation: portrait)
   .hero-section
@@ -207,14 +223,9 @@
 
 @media screen and (min-width: 1600px)
   .projects-grid
-    width 75vw
     max-width initial
+    width 76%
 
   .project-item
-    flex-basis 33.33333%
-    height 16.9vw
-
-    img
-      max-height 40%
-      width auto
-      max-width 70%
+    flex-basis remify(264)
+    height remify(179)
