@@ -50,5 +50,8 @@ module.exports = {
     files: function (extension) {
       return package + '.' + extension;
     }
+  },
+  etc: {
+    domain: 'blick.mx'
   }
 };
