@@ -34,4 +34,17 @@
   onScroll();
   $(window).scroll(onScroll);
   $(window).resize(setBreakpoints);
+
+  $('#typed-phrases span').typed({
+    strings: [
+      'hear from you ^400',
+      'meet you ^400',
+      'work with you ^400',
+      'design with you ^400',
+      'develop with you ^400',
+      'help you ^400'
+    ],
+    loop: true,
+    typeSpeed: 80
+  });
 })();
