@@ -14,8 +14,10 @@
   function fixDivs() {
     if (scrollTop > logoBreakpoint) {
       $('.hero-main-content').addClass('fixed');
+      $('.hero-main-content img').addClass('clickable').addClass('to-top');
     } else {
       $('.hero-main-content').removeClass('fixed');
+      $('.hero-main-content img').removeClass('clickable').removeClass('to-top');
     }
     if (scrollTop > projectsBreakpoint) {
       $('.projects-section-wrapper').addClass('fixed');
