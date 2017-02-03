@@ -5,7 +5,9 @@
     projectsBreakpoint = 0;
 
   function setBreakpoints() {
-    logoBreakpoint = $('.hero-main-content').offset().top + $('.hero-main-content').height();
+    if (!$('.hero-main-content').hasClass('fixed')) {
+      logoBreakpoint = $('.hero-main-content').offset().top + $('.hero-main-content').height();
+    }
     projectsBreakpoint = $('.projects-section-wrapper').offset().top;
   }
 
