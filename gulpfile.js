@@ -1,17 +1,29 @@
 var gulp = require('gulp'),
   config = require('./gulpconfig'),
-  requireDir = require('require-dir');
+  requireDir = require('require-dir'),
+  argv = require('yargs').argv,
+  production = argv.production,
+  buildTasks = [
+    'build:bower',
+    'build:styles',
+    'build:scripts',
+    'copy:fonts',
+    'copy:images',
+    'build:html'
+  ],
+  defaultTasks = [
+    'build'
+  ];
 
 requireDir('./gulptasks');
 
-gulp.task('build', [
-  'build:bower',
-  'build:styles',
-  'build:scripts',
-  'copy:fonts',
-  'copy:images',
-  'build:html'
-]);
+if (production) {
+  buildTasks.push('create:cname');
+} else {
+  defaultTasks.push('serve', 'watch');
+}
+
+gulp.task('build', buildTasks);
 
 gulp.task('watch', function () {
   gulp.watch(config.paths.bower(''), ['build:bower']);
@@ -24,4 +36,4 @@ gulp.task('watch', function () {
 
 gulp.task('serve', ['server:run', 'server:reload']);
 
-gulp.task('default', ['build', 'serve', 'watch']);
+gulp.task('default', defaultTasks);
