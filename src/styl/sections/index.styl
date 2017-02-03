@@ -88,7 +88,7 @@
   display flex
   flex-wrap wrap
   justify-content center
-  width 95%
+  width 94%
   max-width 792px
   center-block()
 
@@ -149,3 +149,8 @@
   .hero-section
     height "calc(70vh - %s)" % remify(145)
     min-height 400px
+
+@media screen and (max-width: 556px)
+  .project-item
+    flex-basis 100%
+    max-width 300px
