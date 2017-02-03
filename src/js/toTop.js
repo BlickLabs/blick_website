@@ -3,8 +3,10 @@
     if (typeof e.preventDefault === 'function') {
       e.preventDefault();
     }
-    $('html, body').animate({
-      scrollTop: 0
-    }, 800);
+    if ($(this).hasClass('clickable')) {
+      $('html, body').animate({
+        scrollTop: 0
+      }, 800);
+    }
   });
 })();
