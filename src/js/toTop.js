@@ -1,12 +1,10 @@
 (function () {
-  $('.to-top').click(function (e) {
+  $(document).on('click.toTop', '.to-top', function (e) {
     if (typeof e.preventDefault === 'function') {
       e.preventDefault();
     }
-    if ($(this).hasClass('clickable')) {
-      $('html, body').animate({
-        scrollTop: 0
-      }, 800);
-    }
+    $('html, body').animate({
+      scrollTop: 0
+    }, 800);
   });
 })();
