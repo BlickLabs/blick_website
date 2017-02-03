@@ -1,8 +1,13 @@
 (function () {
   var scrollTop = 0,
     previousScrollTop = 0,
-    logoBreakpoint = $('.hero-main-content').offset().top + $('.hero-main-content').height(),
+    logoBreakpoint = 0,
+    projectsBreakpoint = 0;
+
+  function setBreakpoints() {
+    logoBreakpoint = $('.hero-main-content').offset().top + $('.hero-main-content').height();
     projectsBreakpoint = $('.projects-section-wrapper').offset().top;
+  }
 
   function fixDivs() {
     if (scrollTop > logoBreakpoint) {
@@ -23,6 +28,8 @@
     fixDivs();
   }
 
+  setBreakpoints()
   onScroll();
   $(window).scroll(onScroll);
+  $(window).resize(setBreakpoints);
 })();
