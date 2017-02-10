@@ -4,6 +4,10 @@
     logoBreakpoint = 0,
     projectsBreakpoint = 0;
 
+  $(document).one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', '.tada', function () {
+    $(this).removeClass('tada');
+  });
+
   function setBreakpoints() {
     if (!$('.hero-main-content').hasClass('fixed')) {
       logoBreakpoint = $('.hero-main-content').offset().top + $('.hero-main-content').height();
@@ -15,9 +19,11 @@
     if (scrollTop > logoBreakpoint) {
       $('.hero-main-content').addClass('fixed');
       $('.hero-main-content img').addClass('clickable').addClass('to-top');
+      $('.hero-main-content img').addClass('tada');
     } else {
       $('.hero-main-content').removeClass('fixed');
       $('.hero-main-content img').removeClass('clickable').removeClass('to-top');
+      $('.hero-main-content img').addClass('tada');
     }
     if (scrollTop > projectsBreakpoint) {
       $('.projects-section-wrapper').addClass('fixed');

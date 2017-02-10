@@ -70,7 +70,7 @@
     content ' '
     display block
     height 65vh
-    max-height 65%
+    max-height 58%
     position absolute
     transition all 0.2s
     width 100%
@@ -95,16 +95,25 @@
   flex-wrap wrap
   justify-content center
   width 94%
-  max-width 792px
+  max-width 980px
   center-block()
 
 .project-item
-  flex-basis 264px
-  height 179px
+  flex-basis 33.333333%
+  height 220px
+  transition box-shadow 0.2s
 
   a
     height 100%
     width 100%
+
+  img
+    max-width 74%
+    transition transform 0.2s
+
+  &:hover
+    img
+      transform scale(1.35)
 
 .dreamwater
   background $dreamwater
