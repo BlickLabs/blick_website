@@ -14,6 +14,7 @@ module.exports = {
       scripts_all: src + '/js/**/*.js',
       scripts_main: src + '/js/app.js',
       img: src + '/img/**/*.*',
+      favicon_folder: src + '/favicon/**/*.*',
       favicon: src + '/favicon.ico',
       fonts: src + '/fonts/**/*.*',
       templates_all: src + '/templates/**/*.njk',
