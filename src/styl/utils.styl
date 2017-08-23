@@ -1,0 +1,34 @@
+.cover
+  background-position center
+  background-size cover
+
+.simple-parallax
+  background-attachment fixed
+
+  @media screen and (max-width: 767px)
+    background-attachment initial
+
+.vertical-center
+  align-items center
+  display flex
+  justify-content center
+
+.blue
+  color $blue3
+
+.text-center
+  text-align center
+
+.typed-cursor
+  opacity 1
+  animation blink 0.7s infinite
+
+@keyframes blink
+  0%
+    opacity 1
+
+  50%
+    opacity 0
+
+  100%
+    opacity 1

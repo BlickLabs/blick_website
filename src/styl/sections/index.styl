@@ -1,0 +1,318 @@
+.hero-section
+  height "calc(100vh - %s)" % remify(145)
+  min-height 300px
+
+  > div
+    flex-basis 90%
+
+.hero-title
+  font-size remify(25)
+  font-weight $medium
+  margin 0
+  padding-bottom 2.4em
+
+.hero-main-content
+  transition padding-top 0.2s
+
+  img
+    width remify(100)
+
+.hero-main-content.fixed
+  background white
+  left 0
+  padding 1em 1em 1.4em 1em
+  position fixed
+  text-align left
+  top 0
+  width 100%
+  z-index 12
+
+  img, #typed-phrases-div
+    display inline-block
+    vertical-align middle
+
+  #typed-phrases-div
+    margin 0.5em 0 0 1em
+
+  img
+    width remify(25)
+
+.hero-email,
+.footer-email
+  display block
+  color $gray
+  font-size remify(16)
+  font-weight $medium
+
+#typed-phrases-div
+  color $blue3
+  font-size remify(20)
+  font-weight $medium
+  margin-top 1.3em
+  margin-bottom 1em
+
+  span
+    display inline-block
+
+#typed-phrases
+  color $lightGray
+  margin-left 0.2em
+  simple-border('bottom', 1px, $borderGray)
+  padding-bottom 0.3333em
+  min-width remify(77.7)
+  text-align left
+
+.projects-section-wrapper
+  position relative
+
+  &::before
+    background #408AB7//$darkBlue
+    content ' '
+    display block
+    height 65vh
+    position absolute
+    transition all 0.2s
+    width 100%
+    z-index -1
+
+  h2
+    color white
+    font-weight $semibold
+    font-size remify(18)
+    padding-bottom 3.3888em
+    padding-top 3.6666em
+    margin 0
+
+  &.fixed::before
+    left 0
+    position fixed
+    top 0
+    width 100%
+
+.projects-grid
+  display flex
+  flex-wrap wrap
+  justify-content center
+  width 94%
+  max-width 980px
+  center-block()
+
+.project-item
+  flex-basis 33.333333%
+  height 220px
+  transition box-shadow 0.2s
+
+  a
+    height 100%
+    width 100%
+
+  img
+    max-width 74%
+    transition transform 0.2s
+
+  &:hover
+    img
+      transform scale(1.35)
+
+.dreamwater
+  background $dreamwater
+
+  img
+    min-width 75px
+    width remify(75)
+
+.dondinero
+  background $dondinero
+
+  img
+    min-width 133px
+    width remify(133)
+
+.emma
+  background $emma
+
+  img
+    min-width 127px
+    width remify(127)
+
+.brick
+  background $brick
+
+  img
+    min-width 74px
+    width remify(74)
+
+.vre
+  background $vre
+
+  img
+    min-width 129px
+    width remify(129)
+
+.mccosmetics
+  background $mccosmetics
+
+  img
+    min-width 65px
+    width remify(65)
+
+.begona
+  background $begona
+
+  img
+    min-width 73px
+    width remify(73)
+
+.local-e
+  background $local-e
+
+  img
+    min-width 100px
+    width remify(100)
+
+.debisa
+  background $debisa
+
+  img
+    min-width 97px
+    width remify(97)
+
+.casabeltrami
+  background $casabeltrami
+
+  img
+    min-width 74px
+    width remify(74)
+
+.aerial
+  background $aerial
+
+  img
+    min-width 73px
+    width remify(73)
+
+.rancholucero
+  background $rancholucero
+
+  img
+    min-width 72px
+    width remify(72)
+
+.opia
+  background $opia
+
+  img
+    min-width 93px
+    width remify(93)
+
+.alegpaez
+  background $alegpaez
+
+  img
+    min-width 100px
+    width remify(100)
+
+.pacer
+  background $pacer
+
+  img
+    min-width 100px
+    width remify(100)
+
+.indots
+  background $indots
+
+  img
+    min-width 140px
+    width remify(140)
+
+.rochalandero
+  background $rochalandero
+
+  img
+    min-width 40px
+    width remify(40)
+
+.finacero
+  background $finacero
+
+  img
+    min-width 150px
+    width remify(150)
+
+.workingch
+  background $workingch
+
+  img
+    min-width 130px
+    width remify(130)
+
+.neopraxis
+  background $neopraxis
+  
+  img
+    max-width 155px
+
+.florella
+  background $florella
+  
+  img
+    max-width 160px
+    
+.coastav
+  background $coastav
+  
+  img
+    max-width 147px
+
+.aguaviento
+  background $aguaviento
+  
+  img
+    max-width 170px
+
+.wellness
+  background $wellness
+  
+  img
+    max-width 121px
+    
+.rgv
+  background $rgv
+  
+  img
+    max-width 82px
+
+.gemo
+  background $gemo
+  
+  img
+    max-width 137px
+    
+.jb
+  background $jb
+  
+  img
+    max-width 82px
+    
+img.to-top
+  width remify(40) !important
+
+@media screen and (orientation: portrait)
+  .hero-section
+    height "calc(70vh - %s)" % remify(145)
+    min-height 400px
+
+@media screen and (max-width: 556px)
+  .project-item
+    flex-basis 100%
+    max-width 380px
+
+@media screen and (min-width: 1600px)
+  .projects-grid
+    max-width initial
+    width 76%
+
+  .project-item
+    flex-basis remify(264)
+    height remify(179)
