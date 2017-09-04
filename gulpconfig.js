@@ -53,6 +53,6 @@ module.exports = {
     }
   },
   etc: {
-    domain: 'blick.mx'
+    domain: 'getmore.mx'
   }
 };
